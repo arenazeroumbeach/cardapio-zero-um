@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena Zero Um</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<script>
+(function() {
+  function updateScrollOffset() {
+    // Seletores: ajusta se você tiver nomes diferentes
+    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
+    const cat = document.querySelector('.category-menu');
+
+    // offsetHeight pega altura real incluindo padding e borda
+    const h = header ? header.offsetHeight : 0;
+    const n = nav ? nav.offsetHeight : 0;
+    const c = cat ? cat.offsetHeight : 0;
+
+    // soma total: título ficará logo abaixo dessas alturas
+    const total = h + n + c;
+
+    // Se quiser deixar um espaço pequeno (ex.: 6px), subtraia: total - 6
+    // const total = Math.max(0, h + n + c - 6);
+
+    document.documentElement.style.setProperty('--scroll-offset', total + 'px');
+  }
+
+  // Atualiza em eventos comuns
+  window.addEventListener('DOMContentLoaded', updateScrollOffset);
+  window.addEventListener('load', updateScrollOffset); // depois de imagens/fonte
+  window.addEventListener('resize', updateScrollOffset);
+
+  // Se você carrega conteúdo dinamicamente (fonts, imagens), pode chamar updateScrollOffset() após isso.
+})();
+</script>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="img/ARENA ZERO UM LOGO PRETO.png" alt="Arena Zero Um" class="logo">
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <!-- Menu de categorias -->
+<div class="category-menu">
+  <a href="#porcoes">Porções</a>
+  <a href="#espetos">Espetos</a>
+  <a href="#bebidas">Bebidas</a>
+  <a href="#cervejas">Cervejas</a>
+  <a href="#drinks">Drinks</a>
+  <a href="#combos">Combos</a>
+  <a href="#acai">Açaí</a>
+</div>
+
+
+  <!-- Cardápio -->
+  <div class="menu" id="cardapio">
+    <h2 id="porcoes">Porções</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Batata Simples</span>
+          <p class="description">Porção de batata frita crocante.</p>
+        </div>
+        <span class="price">R$ 30,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Batata Cheddar e Bacon</span>
+          <p class="description">Batata frita com cheddar cremoso e bacon crocante.</p>
+        </div>
+        <span class="price">R$ 35,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Anéis de Cebola</span>
+          <p class="description">Cebola empanada e frita em formato de anéis.</p>
+        </div>
+        <span class="price">R$ 34,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Calabresa Acebolada</span>
+          <p class="description">Linguiça calabresa fatiada com cebola refogada.</p>
+        </div>
+        <span class="price">R$ 35,90</span>
+      </li>
+    </ul>
+
+
+<h2 id="espetos">Espetos</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Carne</span>
+          <p class="description">Espeto de carne bovina temperada.</p>
+        </div>
+        <span class="price">R$ 13,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Coração</span>
+          <p class="description">Espeto de coração de frango temperado.</p>
+        </div>
+        <span class="price">R$ 13,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Frango</span>
+          <p class="description">Espeto de frango.</p>
+        </div>
+        <span class="price">R$ 11,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Kafta</span>
+          <p class="description">Espeto de carne moída temperada ao estilo árabe.</p>
+        </div>
+        <span class="price">R$ 13,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Linguiça</span>
+          <p class="description">Espeto de linguiça suína grelhada.</p>
+        </div>
+        <span class="price">R$ 11,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Pão de alho</span>
+          <p class="description">Pão recheado com pasta de alho e assado na brasa.</p>
+        </div>
+        <span class="price">R$ 9,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Queijo</span>
+          <p class="description">Espeto de queijo coalho grelhado.</p>
+        </div>
+        <span class="price">R$ 12,00</span>
+      </li>
+    </ul>
+
+    <h2 id="bebidas">Bebidas</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Água sem gás</span>
+          <p class="description">Água mineral natural, 500ml.</p>
+        </div>
+        <span class="price">R$ 5,50</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Água com gás</span>
+          <p class="description">Água mineral gaseificada, 500ml.</p>
+        </div>
+        <span class="price">R$ 5,50</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Coca-Cola lata</span>
+          <p class="description">Refrigerante Coca-Cola tradicional, 350ml.</p>
+        </div>
+        <span class="price">R$ 7,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Coca-Cola Zero lata</span>
+          <p class="description">Versão sem açúcar da Coca-Cola, 350ml.</p>
+        </div>
+        <span class="price">R$ 7,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Guaraná lata</span>
+          <p class="description">Refrigerante Guaraná Antarctica, 350ml.</p>
+        </div>
+        <span class="price">R$ 7,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Guaraná Zero lata</span>
+          <p class="description">Versão sem açúcar do Guaraná Antarctica, 350ml.</p>
+        </div>
+        <span class="price">R$ 7,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Suco Natural Laranja</span>
+          <p class="description">Suco natural feito na hora com laranjas frescas.</p>
+        </div>
+        <span class="price">R$ 12,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Suco Natural Limão</span>
+          <p class="description">Suco de limão espremido na hora, refrescante.</p>
+        </div>
+        <span class="price">R$ 12,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Suco Del Valle</span>
+          <p class="description">Suco Del Valle, 290ml.</p>
+        </div>
+        <span class="price">R$ 8,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Red Bull</span>
+          <p class="description">Energético Red Bull, lata 250ml.</p>
+        </div>
+        <span class="price">R$ 15,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Gatorade</span>
+          <p class="description">Bebida isotônica Gatorade, 500ml.</p>
+        </div>
+        <span class="price">R$ 12,00</span>
+      </li>
+    </ul>
+
+    <h2 id="cervejas">Cervejas</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Heineken 660ML</span>
+          <p class="description">Cerveja Heineken garrafa 660ml.</p>
+        </div>
+        <span class="price">R$ 19,99</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Original 600ML</span>
+          <p class="description">Cerveja Original garrafa 600ml.</p>
+        </div>
+        <span class="price">R$ 17,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Corona LONGNECK</span>
+          <p class="description">Cerveja Corona garrafa 355ml.</p>
+        </div>
+        <span class="price">R$ 15,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Heineken LONGNECK</span>
+          <p class="description">Cerveja Heineken garrafa 330ml.</p>
+        </div>
+        <span class="price">R$ 15,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Balde Heineken 600ML</span>
+          <p class="description">Balde com 3 garrafas de Heineken 600ml.</p>
+        </div>
+        <span class="price">R$ 57,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Balde Original 600ML</span>
+          <p class="description">Balde com 3 garrafas de Original 600ml.</p>
+        </div>
+        <span class="price">R$ 51,90</span>
+      </li>
+    </ul>
+
+
+    <h2 id="drinks">Drinks</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Caipirinha Cachaça</span>
+          <p class="description">Com cachaça e uma fruta, limãao, maracujá</p>
+        </div>
+        <span class="price">R$ 27,00</span>
+      </li>
+        <li>
+        <div class="item-container">
+          <span class="item">Caipirinha Vodka</span>
+          <p class="description">Com cachaça e uma fruta, limãao, maracujá</p>
+        </div>
+        <span class="price">R$ 30,00</span>
+      </li>
+       <li>
+        <div class="item-container">
+          <span class="item">Saquerinha</span>
+          <p class="description">Com saquê e uma fruta, limãao, maracujá</p>
+        </div>
+        <span class="price">R$ 28,00</span>
+      </li>
+       <li>
+        <div class="item-container">
+          <span class="item">Skol Beats 330ML</span>
+          <p class="description"></p>
+        </div>
+        <span class="price">R$ 15,00</span>
+      </li>
+       <li>
+        <div class="item-container">
+          <span class="item">Sminorff Ice 275ML</span>
+          <p class="description"></p>
+        </div>
+        <span class="price">R$ 15,00</span>
+      </li>
+       <li>
+        <div class="item-container">
+          <span class="item">Copo Smirnoff</span>
+          <p class="description">Com Red BUll ou com suco</p>
+        </div>
+        <span class="price">R$ 30,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Copo Gin Tanqueray</span>
+          <p class="description">Com Red Bull ou com suco</p>
+        </div>
+        <span class="price">R$ 36,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Copo Cavalo Branco</span>
+          <p class="description">Com Red Bull ou com suco</p>
+        </div>
+        <span class="price">R$ 30,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Copo Red Label</span>
+          <p class="description">Com Red Bull ou com suco</p>
+        </div>
+        <span class="price">R$ 38,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Copo Black Label</span>
+          <p class="description">Com Red Bull e gelo de coco</p>
+        </div>
+        <span class="price">R$ 46,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Copo Jack Daniels</span>
+          <p class="description">Com Red Bull e gelo de coco</p>
+        </div>
+        <span class="price">R$ 46,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Gelo de Sabor</span>
+          <p class="description">Coco ou Melancia</p>
+        </div>
+        <span class="price">R$ 5,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Gelo de coco</span>
+          <p class="description"></p>
+        </div>
+        <span class="price">R$ 5,00</span>
+      </li>
+       <li>
+        <div class="item-container">
+          <span class="item">Xeque Mate</span>
+          <p class="description"></p>
+        </div>
+        <span class="price">R$ 16,00</span>
+      </li>
+    </ul>
+
+
+    <h2 id="combos">Combos</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Smirnoff</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 199,90</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Gin Rocks</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 189,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Gin Tanqueray</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 290,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Cavalo Branco</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 230,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Red Label</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 300,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Jack Daniels</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 390,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Combo Black Label</span>
+          <p class="description">Com 4 Red Bull ou 4 Sucos</p>
+        </div>
+        <span class="price">R$ 390,00</span>
+      </li>
+    </ul>
+
+
+    
+
+    
+
+    <h2 id="acai">Açaí</h2>
+    <ul>
+      <li>
+        <div class="item-container">
+          <span class="item">Açaí Pequeno</span>
+          <p class="description">Açaí na tigela com granola e banana, 300ml.</p>
+        </div>
+        <span class="price">R$ 18,00</span>
+      </li>
+      <li>
+        <div class="item-container">
+          <span class="item">Açaí Grande</span>
+          <p class="description">Açaí na tigela com acompanhamentos variados, 500ml.</p>
+        </div>
+        <span class="price">R$ 28,00</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Arena Zero Um
+  </footer>
+</body>
+</html>
