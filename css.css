@@ -13,7 +13,7 @@ body {
 header {
   text-align: center;
   padding: 25px 10px;
-  background: linear-gradient(135deg, #3f3ae9, #6a5af9);
+  background: #0082b0;
   color: white;
 }
 
@@ -34,7 +34,7 @@ header {
 }
 
 .welcome h1 span {
-  color: #3f3ae9;
+  color: #0082b0;
 }
 
 .welcome p {
@@ -54,7 +54,7 @@ header {
 
 .menu-button {
   display: inline-block;
-  background: #3f3ae9;
+  background: #0082b0;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -68,7 +68,7 @@ header {
 }
 
 .menu-button:hover {
-  background: #2d29c5;
+  background: #0082b0;
   transform: scale(1.05);
 }
 
@@ -83,10 +83,10 @@ header {
 }
 
 .menu h2 {
-  border-left: 5px solid #3f3ae9;
+  border-left: 5px solid #0082b0;
   padding-left: 12px;
   margin: 30px 0 15px;
-  color: #3f3ae9;
+  color: #0082b0;
   font-size: 1.4em;
 }
 
@@ -145,10 +145,10 @@ li:last-child {
 }
 
 .hidden-section h2 {
-  border-left: 5px solid #3f3ae9;
+  border-left: 5px solid #0082b0;
   padding-left: 12px;
   margin-bottom: 20px;
-  color: #3f3ae9;
+  color: #0082b0;
   font-size: 1.4em;
 }
 
@@ -179,7 +179,7 @@ nav {
 
 /* Links do menu */
 nav a {
-  color: #3f3ae9;                   /* cor principal */
+  color: #0082b0;                   /* cor principal */
   text-decoration: none;            /* remove sublinhado */
   font-weight: 700;
   font-size: 1.05rem;
@@ -235,7 +235,7 @@ nav a:focus {
 .category-menu a {
   flex: 0 0 auto;
   background: #f4f6fa;
-  color: #3f3ae9;
+  color: #0082b0;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -246,7 +246,7 @@ nav a:focus {
 }
 
 .category-menu a:hover {
-  background: #3f3ae9;
+  background: #0082b0;
   color: #fff;
   transform: scale(1.05);
 }
